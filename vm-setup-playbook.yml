@@ -1,0 +1,10 @@
+- name: Install Cohesity agent
+  hosts: all
+  remote_user: root
+  tasks:
+    - name: Install Cohesity agent
+      yum:
+        name: el-cohesity-agent-7.1.2_u1-1.x86_64.rpm
+        state: present
+        disable_gpg_check: True
+      become: yes
